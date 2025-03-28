@@ -1688,9 +1688,10 @@ function Dashboard() {
                       className="warning-type-tabs"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Radio.Button value="dnl">DNL</Radio.Button>
-                      <Radio.Button value="hld">HLD</Radio.Button>
-                      <Radio.Button value="dnu">DNU</Radio.Button>
+                      <Radio.Button value="receive_fail">接收失败</Radio.Button>
+                      <Radio.Button value="rfi">RFI</Radio.Button>
+                      <Radio.Button value="rfs">RFS</Radio.Button>
+                      <Radio.Button value="other">其他</Radio.Button>
                     </Radio.Group>
                   </div>
                 }
@@ -2039,9 +2040,10 @@ function Dashboard() {
                       className="warning-type-tabs"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Radio.Button value="dnl">DNL</Radio.Button>
-                      <Radio.Button value="hld">HLD</Radio.Button>
-                      <Radio.Button value="dnu">DNU</Radio.Button>
+                      <Radio.Button value="receive_fail">接收失败</Radio.Button>
+                      <Radio.Button value="rfi">RFI</Radio.Button>
+                      <Radio.Button value="rfs">RFS</Radio.Button>
+                      <Radio.Button value="other">其他</Radio.Button>
                     </Radio.Group>
                   </div>
                 }
