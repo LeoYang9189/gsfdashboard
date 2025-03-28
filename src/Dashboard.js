@@ -1238,10 +1238,10 @@ function Dashboard() {
             >
             <Statistic
                 title="总申报单量"
-                value={data.overview.totalDeclarations}
-                precision={0}
-                valueStyle={{ color: '#1890ff' }}
-                prefix={<SafetyOutlined />}
+              value={data.overview.totalDeclarations}
+              precision={0}
+              valueStyle={{ color: '#1890ff' }}
+              prefix={<SafetyOutlined />}
             />
           </Card>
         </Col>
@@ -1252,9 +1252,9 @@ function Dashboard() {
             >
             <Statistic
                 title="发送中"
-                value={data.overview.pendingReview}
-                precision={0}
-                valueStyle={{ color: '#faad14' }}
+              value={data.overview.pendingReview}
+              precision={0}
+              valueStyle={{ color: '#faad14' }}
                 prefix={<SendOutlined />}
             />
           </Card>
@@ -1269,7 +1269,7 @@ function Dashboard() {
                 value={data.overview.approved}
                 precision={0}
                 valueStyle={{ color: '#52c41a' }}
-                prefix={<CheckCircleOutlined />}
+              prefix={<CheckCircleOutlined />}
             />
           </Card>
         </Col>
@@ -1281,8 +1281,8 @@ function Dashboard() {
             <Statistic
                 title="匹配成功（S1）"
                 value={data.overview.approved * 0.85}
-                precision={0}
-                valueStyle={{ color: '#3f8600' }}
+              precision={0}
+              valueStyle={{ color: '#3f8600' }}
                 prefix={<CheckSquareOutlined />}
             />
           </Card>
@@ -1307,11 +1307,11 @@ function Dashboard() {
               onClick={() => handleMetricChange('warning')}
             >
             <Statistic
-                title="异常预警"
-                value={data.overview.abnormalWarnings}
-                precision={0}
-                valueStyle={{ color: '#cf1322' }}
-                prefix={<ExclamationCircleOutlined />}
+              title="异常预警"
+              value={data.overview.abnormalWarnings}
+              precision={0}
+              valueStyle={{ color: '#cf1322' }}
+              prefix={<ExclamationCircleOutlined />}
             />
           </Card>
         </Col>
@@ -1599,27 +1599,27 @@ function Dashboard() {
         {renderTimeSelector()}
         
         {/* 数据概览卡片 */}
-        <Row gutter={[16, 16]} className="data-overview">
+      <Row gutter={[16, 16]} className="data-overview">
           <Col span={4}>
             <Card 
               className={`stats-card info-card ${trendMetric === 'total' ? 'active' : ''}`}
               onClick={() => handleMetricChange('total')}
             >
-              <Statistic
+            <Statistic
                 title="总申报单量"
                 value={data.overview.totalDeclarations}
-                precision={0}
-                valueStyle={{ color: '#1890ff' }}
+              precision={0}
+              valueStyle={{ color: '#1890ff' }}
                 prefix={<SafetyOutlined />}
-              />
-            </Card>
-          </Col>
+            />
+          </Card>
+        </Col>
           <Col span={4}>
             <Card 
               className={`stats-card ${trendMetric === 'pending' ? 'active' : ''}`}
               onClick={() => handleMetricChange('pending')}
             >
-              <Statistic
+            <Statistic
                 title="发送中"
                 value={data.overview.pendingReview}
                 precision={0}
@@ -1635,13 +1635,13 @@ function Dashboard() {
             >
               <Statistic
                 title="接收成功"
-                value={data.overview.approved}
-                precision={0}
+              value={data.overview.approved}
+              precision={0}
                 valueStyle={{ color: '#52c41a' }}
                 prefix={<CheckCircleOutlined />}
-              />
-            </Card>
-          </Col>
+            />
+          </Card>
+        </Col>
           <Col span={4}>
             <Card 
               className={`stats-card ${trendMetric === 'matched' ? 'active' : ''}`}
@@ -1688,7 +1688,6 @@ function Dashboard() {
                       className="warning-type-tabs"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Radio.Button value="receive_fail">接收失败</Radio.Button>
                       <Radio.Button value="rfi">RFI</Radio.Button>
                       <Radio.Button value="rfs">RFS</Radio.Button>
                       <Radio.Button value="other">其他</Radio.Button>
@@ -2002,12 +2001,12 @@ function Dashboard() {
               <Statistic
                 title="匹配成功"
                 value={data.overview.approved * 0.85}
-                precision={0}
+              precision={0}
                 valueStyle={{ color: '#3f8600' }}
                 prefix={<CheckSquareOutlined />}
-              />
-            </Card>
-          </Col>
+            />
+          </Card>
+        </Col>
           <Col span={4}>
             <Card 
               className={`stats-card error-card ${trendMetric === 'receive_fail' ? 'active' : ''}`}
@@ -2027,7 +2026,7 @@ function Dashboard() {
               className={`stats-card warning-card ${trendMetric === 'warning' ? 'active' : ''}`}
               onClick={() => handleMetricChange('warning')}
             >
-              <Statistic
+            <Statistic
                 title={
                   <div>
                     <span style={{ marginRight: '8px' }}>异常预警</span>
@@ -2040,10 +2039,9 @@ function Dashboard() {
                       className="warning-type-tabs"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Radio.Button value="receive_fail">接收失败</Radio.Button>
-                      <Radio.Button value="rfi">RFI</Radio.Button>
-                      <Radio.Button value="rfs">RFS</Radio.Button>
-                      <Radio.Button value="other">其他</Radio.Button>
+                      <Radio.Button value="dnl">DNL</Radio.Button>
+                      <Radio.Button value="hld">HLD</Radio.Button>
+                      <Radio.Button value="dnu">DNU</Radio.Button>
                     </Radio.Group>
                   </div>
                 }
@@ -2051,19 +2049,19 @@ function Dashboard() {
                 precision={0}
                 valueStyle={{ color: '#cf1322' }}
                 prefix={<ExclamationCircleOutlined />}
-              />
-            </Card>
-          </Col>
-        </Row>
-        
-        {/* 图表区域 */}
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <Card className="chart-container">
-              <ReactECharts option={trendChartOption} style={{ height: '350px' }} />
-            </Card>
-          </Col>
-          <Col span={12}>
+            />
+          </Card>
+        </Col>
+      </Row>
+      
+      {/* 图表区域 */}
+      <Row gutter={[16, 16]}>
+        <Col span={12}>
+          <Card className="chart-container">
+            <ReactECharts option={trendChartOption} style={{ height: '350px' }} />
+          </Card>
+        </Col>
+        <Col span={12}>
             <Card className="chart-container" onClick={(e) => e.stopPropagation()}>
               <div style={{ marginBottom: 16, textAlign: 'right' }}>
                 <Radio.Group 
@@ -2078,13 +2076,13 @@ function Dashboard() {
                 </Radio.Group>
               </div>
               <ReactECharts option={portDistributionChartOption} style={{ height: '320px' }} />
-            </Card>
-          </Col>
-        </Row>
-        
-        {/* 表格数据 */}
-        <Row gutter={[16, 16]}>
-          <Col span={24}>
+          </Card>
+        </Col>
+      </Row>
+      
+      {/* 表格数据 */}
+      <Row gutter={[16, 16]}>
+        <Col span={24}>
             <Card 
               title="异常预警列表" 
               className="table-card"
@@ -2092,38 +2090,38 @@ function Dashboard() {
               ref={warningTableRef}
             >
               {filteredWarnings.length > 0 ? (
-                <Table 
+            <Table 
                   columns={afrWarningColumns} 
                   dataSource={getAFRWarningData()} 
-                  rowKey="id"
-                  pagination={{ pageSize: 5 }}
+              rowKey="id"
+              pagination={{ pageSize: 5 }}
                   className="styled-table"
                   bordered={false}
                   size="middle"
-                />
+            />
               ) : emptyTableContent}
-            </Card>
-          </Col>
-        </Row>
-        
+          </Card>
+        </Col>
+      </Row>
+      
         {/* 最近申报记录表格 */}
-        <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-          <Col span={24}>
-            <Card title="最近申报记录" className="table-card">
+      <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
+        <Col span={24}>
+          <Card title="最近申报记录" className="table-card">
               {filteredDeclarations.length > 0 ? (
-                <Table 
+            <Table 
                   columns={afrDeclarationColumns} 
                   dataSource={getAFRDeclarationData()} 
-                  rowKey="id"
-                  pagination={{ pageSize: 5 }}
+              rowKey="id"
+              pagination={{ pageSize: 5 }}
                   className="styled-table"
                   bordered={false}
                   size="middle"
-                />
+            />
               ) : emptyTableContent}
-            </Card>
-          </Col>
-        </Row>
+          </Card>
+        </Col>
+      </Row>
       </>
     );
   };
