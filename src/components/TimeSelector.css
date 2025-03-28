@@ -1,0 +1,55 @@
+.time-selector-container {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.time-selector-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: nowrap;
+}
+
+.time-selector-label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.time-type-section {
+  min-width: 320px;
+}
+
+.time-range-section {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.time-type-group {
+  display: flex;
+  white-space: nowrap;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1200px) {
+  .time-selector-row {
+    gap: 16px;
+  }
+  
+  .time-type-section {
+    min-width: 300px;
+  }
+  
+  .time-range-section {
+    gap: 4px;
+  }
+  
+  .ant-picker.ant-picker-range {
+    width: 230px !important;
+  }
+} 

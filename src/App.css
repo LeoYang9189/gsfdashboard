@@ -1,0 +1,475 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.stats-card {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.stats-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.stats-card.active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border: 2px solid #1890ff;
+}
+
+.stats-card.active.info-card {
+  border-color: #1890ff;
+}
+
+.stats-card.active.warning-card {
+  border-color: #ff4d4f;
+}
+
+.stats-card .ant-statistic-title {
+  font-size: 14px;
+}
+
+.warning-card {
+  border-left: 4px solid #ff4d4f;
+}
+
+.normal-card {
+  border-left: 4px solid #52c41a;
+}
+
+.pending-card {
+  border-left: 4px solid #faad14;
+}
+
+.info-card {
+  border-left: 4px solid #1890ff;
+}
+
+.error-card {
+  border-left: 4px solid #ff7875;
+}
+
+.error-card:hover {
+  border-color: #ff7875;
+}
+
+.error-card.active {
+  border: 2px solid #ff7875;
+}
+
+/* 警告栏样式 */
+.warning-alert {
+  margin-top: -8px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background-color: #fff8e6;
+  border: 1px solid #ffe58f;
+  box-shadow: 0 2px 8px rgba(255, 169, 40, 0.15);
+}
+
+.warning-alert .ant-alert-icon {
+  font-size: 16px;
+  color: #faad14;
+}
+
+.warning-alert .ant-alert-description {
+  font-size: 14px;
+  color: #5a3407;
+}
+
+/* 匹配成功卡片中的Tab按钮样式 */
+.match-type-tabs .ant-radio-button-wrapper {
+  font-size: 12px;
+  padding: 0 6px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 2px;
+}
+
+.match-type-tabs .ant-radio-button-wrapper-checked {
+  background: #52c41a;
+  border-color: #52c41a;
+  color: #fff;
+}
+
+.match-type-tabs .ant-radio-button-wrapper:not(:first-child)::before {
+  background-color: #e8e8e8;
+  height: 14px;
+  top: 4px;
+}
+
+/* 港口类型切换Tab样式 */
+.port-type-tabs .ant-radio-button-wrapper {
+  font-size: 14px;
+  padding: 0 16px;
+  height: 30px;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+
+.port-type-tabs .ant-radio-button-wrapper-checked {
+  background: #1890ff;
+  border-color: #1890ff;
+  color: white;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.port-type-tabs .ant-radio-button-wrapper:hover {
+  color: #1890ff;
+}
+
+.port-type-tabs .ant-radio-button-wrapper-checked:hover {
+  color: white;
+}
+
+/* Tab切换样式 */
+.ant-tabs-nav {
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #f0f2f5 0%, #ffffff 100%);
+  border-radius: 8px;
+  padding: 8px 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ant-tabs-tab {
+  font-size: 16px;
+  padding: 12px 24px;
+  transition: all 0.3s;
+  margin: 0 8px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ant-tabs-tab::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #1890ff;
+  transition: all 0.3s;
+  transform: translateX(-50%);
+}
+
+.ant-tabs-tab:hover {
+  color: #1890ff;
+  background-color: rgba(24, 144, 255, 0.05);
+}
+
+.ant-tabs-tab:hover::before {
+  width: 20px;
+}
+
+.ant-tabs-tab-active {
+  font-weight: 500;
+  color: #1890ff;
+  background-color: rgba(24, 144, 255, 0.1);
+}
+
+.ant-tabs-tab-active::before {
+  width: 50%;
+}
+
+.ant-tabs-ink-bar {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #1890ff 0%, #69c0ff 100%);
+}
+
+/* 时间选择器样式 */
+.time-selector {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.time-selector:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 时间类型按钮组样式 */
+.time-selector .time-type-group .ant-radio-button-wrapper {
+  height: 36px;
+  line-height: 36px;
+  transition: all 0.3s;
+  padding: 0 20px;
+  background: linear-gradient(to right, #f5f5f5, #fff);
+  border: 1px solid #d9d9d9;
+  font-weight: 500;
+  color: #595959;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-selector .time-type-group .ant-radio-button-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: all 0.6s;
+}
+
+.time-selector .time-type-group .ant-radio-button-wrapper:hover::before {
+  left: 100%;
+}
+
+.time-selector .time-type-group .ant-radio-button-wrapper-checked {
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+  color: white;
+  border-color: #1890ff;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.time-selector .time-type-group .ant-radio-button-wrapper-checked::after {
+  display: none;
+}
+
+/* 快速选择按钮样式 */
+.time-selector .quick-select-btn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  background: linear-gradient(to right, #f5f5f5, #fff);
+  border: 1px solid #d9d9d9;
+  color: #595959;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-selector .quick-select-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: all 0.6s;
+}
+
+.time-selector .quick-select-btn:hover::before {
+  left: 100%;
+}
+
+.time-selector .quick-select-btn-active {
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+  color: white;
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.time-selector .search-btn {
+  background: linear-gradient(90deg, #1890ff 0%, #69c0ff 100%);
+  border: none;
+  height: 36px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(24, 144, 255, 0.3);
+}
+
+.time-selector .search-btn:hover {
+  background: linear-gradient(90deg, #40a9ff 0%, #85d0ff 100%);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.time-selector .ant-form-item-label label {
+  font-weight: 500;
+  color: #333;
+}
+
+.time-selector .ant-picker {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  height: 36px;
+  transition: all 0.3s;
+}
+
+.time-selector .ant-picker:hover,
+.time-selector .ant-picker-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.dashboard .ant-statistic-content {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.dashboard .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard .ant-table-thead > tr > th {
+  background: linear-gradient(90deg, #f0f5ff 0%, #f8fbff 100%);
+  color: #1f1f1f;
+  font-weight: 500;
+  padding: 16px;
+  border-bottom: 1px solid #e6f0ff;
+}
+
+.dashboard .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  transition: all 0.3s;
+}
+
+.dashboard .ant-table-tbody > tr:hover > td {
+  background-color: #f0f7ff !important;
+}
+
+.dashboard .ant-table-tbody > tr:nth-child(even) {
+  background-color: #fafcff;
+}
+
+.dashboard .ant-table-pagination {
+  margin: 16px 0;
+}
+
+.dashboard .table-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard .table-card:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .table-card .ant-card-head {
+  background: linear-gradient(90deg, #f5f8ff 0%, #ffffff 100%);
+  border-bottom: 1px solid #e6f0ff;
+  padding: 0 20px;
+}
+
+.dashboard .table-card .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+.dashboard .table-card .ant-card-body {
+  padding: 0;
+}
+
+/* 美化空数据提示 */
+.empty-data-container {
+  background: #fcfcfc;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px dashed #d9d9d9;
+}
+
+.empty-data-container .anticon {
+  font-size: 32px;
+  color: #faad14;
+  margin-bottom: 16px;
+}
+
+.empty-data-container p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* 趋势图容器样式 */
+.chart-container {
+  transition: all 0.3s;
+}
+
+.chart-container:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 趋势图tooltip样式 */
+.echarts-tooltip {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+}
+
+.echarts-tooltip-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.echarts-tooltip-value {
+  color: #666;
+  font-size: 13px;
+}
+
+/* 美化表格样式 */
+.dashboard .styled-table {
+  margin-top: 8px;
+}
+
+.dashboard .styled-table .ant-table-thead > tr > th {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.dashboard .styled-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dashboard .styled-table .ant-table-tbody > tr:last-child > td {
+  border-bottom: none;
+}
+
+.dashboard .styled-table .ant-table-row:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* 异常预警类型Tab按钮样式 */
+.warning-type-tabs .ant-radio-button-wrapper {
+  font-size: 12px;
+  padding: 0 6px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 2px;
+}
+
+.warning-type-tabs .ant-radio-button-wrapper-checked {
+  background: #ff4d4f;
+  border-color: #ff4d4f;
+  color: #fff;
+}
+
+.warning-type-tabs .ant-radio-button-wrapper:not(:first-child)::before {
+  background-color: #e8e8e8;
+  height: 14px;
+  top: 4px;
+}
+
+.warning-type-tabs .ant-radio-button-wrapper:hover {
+  color: #ff4d4f;
+}
+
+.warning-type-tabs .ant-radio-button-wrapper-checked:hover {
+  color: #fff;
+  background: #ff7875;
+  border-color: #ff7875;
+} 
